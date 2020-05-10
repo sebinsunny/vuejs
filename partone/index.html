@@ -49,13 +49,15 @@
       <div class="col-sm-12">
         <div class="card">
           <div class="card-header">
-            Attending({{guestName.length}})
+            Attending({{eventCapacityPercentage}})
+            <br>
+            <progress :style="{width : eventCapacityPercentage + '%'}"></progress>
           </div>
           <div class="card-block">
             <div v-if="guestName.length>0">
               <div>
                 <div class="card-success rounded name-box"
-                     v-for="name in guestName">
+                     v-for="name in sortf">
                   {{name}}
                 </div>
               </div>
